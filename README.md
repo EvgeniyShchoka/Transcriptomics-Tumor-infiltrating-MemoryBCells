@@ -1,4 +1,4 @@
-# Transcriptomics-of-IgA-IgG-TIL-B
+# Comparative transcriptome analysis of B lymphocyte populations infiltrating tumors and expressing IgA and IgG
 
 ## Brief description
 This repository contains code, tables, and visualizations for a paper soon to be published by Chudakov Lab. The research focuses on investigating the role of tumour-infiltrating memory B cells in Lung Adenocarcinoma (LUAD) and Kidney Renal Clear Cell Carcinoma (KIRC) progression. The findings shed light on the specific subset of FCRL4-expressing memory B cells, indicating exhausted, chronically antigen-stimulated phenotype.
