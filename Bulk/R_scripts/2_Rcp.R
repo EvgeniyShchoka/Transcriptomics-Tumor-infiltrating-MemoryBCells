@@ -283,7 +283,7 @@ significant_res_Rcp_tum_out <- significant_res_Rcp_tum %>%
 
 # Export the results to a TSV file
 write.table(
-  significant_res_Rcp_tum,
+  significant_res_Rcp_tum_out,
   file = "Tables/Rcp_DE_genes.tsv",
   sep = "\t",
   quote = FALSE,
