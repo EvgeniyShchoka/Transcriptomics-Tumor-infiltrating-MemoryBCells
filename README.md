@@ -9,4 +9,4 @@ This repository contains code, tables, and visualizations for a paper soon to be
 **Single-cell** folder contains scripts for clusterization and description of tumour-infiltrating memory B cells in LUAD. The single-cell transcriptome data was obtained from Leader et al. [article](https://github.com/effiken/Leader_et_al).
 
 **TCGA** folder contains script for Kaplan-Meier curves representing the influence of absolute and normalized value of FCRL4 gene to the progression of LUAD. 
-![Kaplan-Meier curve for FCRL4 expression normalized to the expression of CD20 in LUAD](/TCGA/Graphs_png/surv_plot_normalized_small.png width='25')
+<img src="[/TCGA/Graphs_png/surv_plot_normalized_small.png](https://raw.githubusercontent.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/master/TCGA/Graphs_png/surv_plot_normalized_small.png)https://raw.githubusercontent.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/master/TCGA/Graphs_png/surv_plot_normalized_small.png" width=50% height=50%>
