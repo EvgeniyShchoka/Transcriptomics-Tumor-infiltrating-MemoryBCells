@@ -65,6 +65,16 @@ Detection of doublets using [DoubletFinder](https://github.com/chris-mcginnis-uc
 
 Addition of QC metrics (such as % of motochondrial, ribosomal, and hemoglobin genes, % of the largest genes etc.)
 
+[**4_QC_graphs.R**](/Single-cell/R_scripts/4_QC_graphs.R)
+
+Visualization of QC metrics and removal of inappropriate cells.
+
+<p align="center">
+<img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/4_QC_vln_nFeature_RNA.png" width=70% height=70%>
+
+<p align="center">
+<img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/4_QC_dotplot_mito_ribo_feature.png" width=70% height=70%>
+
 ### TCGA
 
 Contains script for Kaplan-Meier curves representing the influence of absolute and normalized value of FCRL4 gene to the progression of LUAD. 
