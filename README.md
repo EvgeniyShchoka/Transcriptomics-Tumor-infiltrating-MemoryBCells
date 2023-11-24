@@ -12,12 +12,12 @@ The raw data were processed using STAR and featureCounts. GRCh38.p13 genome asse
 
 [**1_Lcp.R**](/Bulk/R_scripts/1_Lcp.R) 
 
-Deconvolution was performed for identification of contaminated samples. The results were validated by the expression of CD19 and CD20 (MS4A1) marker genes.
+Deconvolution was performed for identification of contaminated samples in LUAD. The results were validated by the expression of CD19 and CD20 (MS4A1) marker genes.
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Lcp_heatmap_xCell.png"  width=45% height=45%/>
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Lcp_scatterplot_CD19_vs_CD20.png"  width=45% height=45%"/>
     
-Differential expression of IgA+ vs IgG+ memory B cells and shrinkage of log2 fold changes we have identified 46 differentially expressed genes with adjusted P value (p_adj) < 0.01 and absolute log fold change (LFC) > 1.
+Differential expression of IgA+ vs IgG+ memory B cells and shrinkage of log2 fold changes we have identified 46 differentially expressed (DE) genes with adjusted P value (p_adj) < 0.01 and absolute log fold change (LFC) > 1.
 
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Lcp_heatmap_DE_genes.png"  width=45% height=45%/>
@@ -27,6 +27,16 @@ To detect statistically significant group of genes Gene Set Enrichment Analysis 
 
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Lcp_GSEA_summary.png" width=60% height=60%>
+
+[**2_Rcp.R**](/Bulk/R_scripts/2_Rcp.R) 
+
+Deconvolution and valisation for identification of contaminated samples was performaed also for KIRC.
+
+<p align="center">
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Rcp_heatmap_xCell.png"  width=45% height=45%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Rcp_scatterplot_CD19_vs_CD20.png"  width=45% height=45%"/>
+
+Differential expression of IgA+ vs IgG+ memory B cells and shrinkage of log2 fold changes we have identified 6 DE genes with p_adj < 0.05 and absolute LFC > 1. 
 
 ### Single-cell
 
