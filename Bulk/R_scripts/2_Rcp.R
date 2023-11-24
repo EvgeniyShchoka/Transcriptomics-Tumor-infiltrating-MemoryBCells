@@ -12,7 +12,7 @@ options(ggrepel.max.overlaps = Inf)
 set.seed(1)
 
 # set working directory
-wd <- "~/B_Memory_master/Master_Diploma_Private/Output/Bulk//"
+wd <- "~/B_Memory_master/Master_Diploma_Private/Output/Bulk/"
 setwd(wd)
 
 # Create directory for output if it doesn't exist
