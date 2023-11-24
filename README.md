@@ -14,7 +14,7 @@ The raw data were processed using STAR and featureCounts. GRCh38.p13 genome asse
 
 Deconvolution was performed for identification of contaminated samples. The results were validated by the expression of CD19 and CD20 (MS4A1) marker genes.
 <p align="center">
-    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Lcp_heatmap_xCell.png"  width=50% height=50%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Lcp_heatmap_xCell.png"  width=50% height=55%/>
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Lcp_scatterplot_CD19_vs_CD20.png"  width=45% height=45%"/>
     
         
