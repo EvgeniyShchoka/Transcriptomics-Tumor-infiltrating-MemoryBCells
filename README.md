@@ -10,4 +10,4 @@ This repository contains code, tables, and visualizations for a paper soon to be
 
 **TCGA** folder contains script for Kaplan-Meier curves representing the influence of absolute and normalized value of FCRL4 gene to the progression of LUAD. 
 
-<img src="https://raw.githubusercontent.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/master/TCGA/Graphs_png/surv_plot_normalized_small.png" width=50% height=50%>
+<img src="https://raw.githubusercontent.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/master/TCGA/Graphs_png/surv_plot_normalized_small.png" width=30% height=30%>
