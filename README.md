@@ -11,6 +11,7 @@ Contains scripts for downstream analysis of IgA+ vs IgG+ memory B cells in LUAD 
 The raw data were processed using STAR and featureCounts. GRCh38.p13 genome assembly and GRCh38.109 gene annotation from ensembl.org were used.
 
 [**1_Lcp.R**](/Bulk/R_scripts/1_Lcp.R) 
+
 Deconvolution was performed for identification of contaminated samples. The results were validated by the expression of CD19 and CD20 (MS4A1) marker genes.
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Lcp_heatmap_xCell.png" width=45% height=45%/>
