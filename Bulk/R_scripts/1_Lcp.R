@@ -70,7 +70,7 @@ feature_counts_Lcp_tum_xCell <- deconvolute(feature_counts_Lcp_tum_tpm, "xcell")
 # Creating a heatmap
 png(filename = "Graphs_png/Lcp_heatmap_xCell.png", 
     width = 8, 
-    height = 7, 
+    height = 8, 
     res = 450, 
     units = "in")
 
