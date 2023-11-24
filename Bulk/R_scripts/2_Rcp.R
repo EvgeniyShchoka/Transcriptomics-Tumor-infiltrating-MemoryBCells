@@ -277,16 +277,17 @@ Rcp_heatmap_DE_genes
 dev.off()
 
 # Order the significant results by adjusted p-value
-significant_res_Rcp_tum <- significant_res_Rcp_tum[order(significant_res_Rcp_tum$log2FoldChange), ] %>%
-  remove_rownames() %>% 
-  tibble::column_to_rownames("refs")
+significant_res_Rcp_tum_out <- significant_res_Rcp_tum %>%
+  arrange(log2FoldChange) %>%
+  select(Gene = refs, everything())
 
 # Export the results to a TSV file
 write.table(
   significant_res_Rcp_tum,
   file = "Tables/Rcp_DE_genes.tsv",
   sep = "\t",
-  quote = FALSE
+  quote = FALSE,
+  row.names = FALSE
 )
 
 
@@ -332,7 +333,7 @@ gsea_results <- GSEA(
 write.table(gsea_results@result, 
             file = "Tables/Rcp_gsea_results.tsv", 
             sep = "\t", 
-            row.names = T, 
+            row.names = F, 
             quote = FALSE)
 
 # Run GSEA using the GO database
@@ -371,17 +372,17 @@ gsea_go_CC_results <- gseGO(
 write.table(gsea_go_BP_results@result, 
             file = "Tables/Rcp_gsea_go_BP_results.tsv", 
             sep = "\t", 
-            row.names = T, 
+            row.names = F, 
             quote = FALSE)
 write.table(gsea_go_MF_results@result, 
             file = "Tables/Rcp_gsea_go_MF_results.tsv", 
             sep = "\t", 
-            row.names = T, 
+            row.names = F, 
             quote = FALSE)
 write.table(gsea_go_CC_results@result, 
             file = "Tables/Rcp_gsea_go_CC_results.tsv", 
             sep = "\t", 
-            row.names = T, 
+            row.names = F, 
             quote = FALSE)
 
 # Visualize GSEA output
@@ -429,6 +430,13 @@ Rcp_combined_results <- bind_rows(
   mutate(gsea_go_MF_results@result, Method = "GSEA GO MF"),
   mutate(gsea_go_CC_results@result, Method = "GSEA GO CC")
 )
+
+# Write a summary table
+write.table(Rcp_combined_results, 
+            file = "Tables/Rcp_gsea_combined_results.tsv", 
+            sep = "\t", 
+            row.names = F, 
+            quote = FALSE)
 
 # Calculate the cumulative sums for the number of items in each set
 Rcp_cumulative_sums <- cumsum(table(factor(Rcp_combined_results$Method, levels = c("GSEA GO CC", "GSEA GO MF", "GSEA GO BP", "GSEA"))))

@@ -271,16 +271,17 @@ Lcp_heatmap_DE_genes
 dev.off()
 
 # Order the significant results by adjusted p-value
-significant_res_Lcp_tum <- significant_res_Lcp_tum[order(significant_res_Lcp_tum$log2FoldChange), ] %>%
-  remove_rownames() %>% 
-  tibble::column_to_rownames("refs")
+significant_res_Lcp_tum_out <- significant_res_Lcp_tum %>%
+  arrange(log2FoldChange) %>%
+  select(Gene = refs, everything())
 
 # Export the results to a TSV file
 write.table(
-  significant_res_Lcp_tum,
+  significant_res_Lcp_tum_out,
   file = "Tables/Lcp_DE_genes.tsv",
   sep = "\t",
-  quote = FALSE
+  quote = FALSE,
+  row.names = FALSE
 )
 
 
@@ -328,7 +329,7 @@ gsea_results <- GSEA(
 write.table(gsea_results@result, 
             file = "Tables/Lcp_gsea_results.tsv", 
             sep = "\t", 
-            row.names = T, 
+            row.names = F, 
             quote = FALSE)
 
 # Run GSEA using the GO database
@@ -367,17 +368,17 @@ gsea_go_CC_results <- gseGO(
 write.table(gsea_go_BP_results@result, 
             file = "Tables/Lcp_gsea_go_BP_results.tsv", 
             sep = "\t", 
-            row.names = T, 
+            row.names = F, 
             quote = FALSE)
 write.table(gsea_go_MF_results@result, 
             file = "Tables/Lcp_gsea_go_MF_results.tsv", 
             sep = "\t", 
-            row.names = T, 
+            row.names = F, 
             quote = FALSE)
 write.table(gsea_go_CC_results@result, 
             file = "Tables/Lcp_gsea_go_CC_results.tsv", 
             sep = "\t", 
-            row.names = T, 
+            row.names = F, 
             quote = FALSE)
 
 # Visualize GSEA output
@@ -426,6 +427,13 @@ combined_results <- bind_rows(
   mutate(gsea_go_MF_results@result, Method = "GSEA GO MF"),
   mutate(gsea_go_CC_results@result, Method = "GSEA GO CC")
 )
+
+# Write a summary table
+write.table(combined_results, 
+            file = "Tables/Lcp_gsea_combined_results.tsv", 
+            sep = "\t", 
+            row.names = F, 
+            quote = FALSE)
 
 # Create a list of uninformative pathways
 row_names_df_to_remove<-c("HALLMARK_XENOBIOTIC_METABOLISM",
