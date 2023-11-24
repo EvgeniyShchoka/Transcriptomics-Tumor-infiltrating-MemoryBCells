@@ -5,7 +5,7 @@ This repository contains code, tables, and visualizations for a paper soon to be
 
 ## Repository structure
 
-### Bulk 
+## Bulk 
 
 Contains scripts for downstream analysis of IgA+ vs IgG+ memory B cells in LUAD and KIRC. The bulk transcriptome libraries obtained in our laboratory will be made available after the release of the associated article.
 
