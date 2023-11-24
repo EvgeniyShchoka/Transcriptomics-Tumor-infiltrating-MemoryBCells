@@ -51,6 +51,9 @@ Gene Set Enrichment Analysis supplemented with Gene ontology (GO) gene setswas a
 ### Single-cell
 
 Contains scripts for clusterization and description of tumour-infiltrating memory B cells in LUAD. The single-cell transcriptome data was obtained from Leader et al. [article](https://github.com/effiken/Leader_et_al).
+Data were aligned by the authors of the article using Cell Ranger.
+
+[**1_Labels.R**](/Single-cell/R_scripts/1_Labels.R) 
 
 ### TCGA
 
