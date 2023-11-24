@@ -55,6 +55,16 @@ Data were aligned by the authors of the article using Cell Ranger.
 
 [**1_Labels.R**](/Single-cell/R_scripts/1_Labels.R) 
 
+Addition of metadata and exclusion of TCR samples
+
+[**2_DoubletFinder.R**](/Single-cell/R_scripts/2_DoubletFinder.R)
+
+Detection of doublets using [DoubletFinder](https://github.com/chris-mcginnis-ucsf/DoubletFinder) package.
+
+[**3_QC.R**](/Single-cell/R_scripts/3_QC.R)
+
+Addition of QC metrics (such as % of motochondrial, ribosomal, and hemoglobin genes, % of the largest genes etc.)
+
 ### TCGA
 
 Contains script for Kaplan-Meier curves representing the influence of absolute and normalized value of FCRL4 gene to the progression of LUAD. 
