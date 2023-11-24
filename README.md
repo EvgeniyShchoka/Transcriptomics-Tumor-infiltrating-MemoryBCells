@@ -5,18 +5,18 @@ This repository contains code, tables, and visualizations for a paper soon to be
 
 ## Repository structure
 
-###Bulk 
+### Bulk 
 
 Contains scripts for downstream analysis of IgA+ vs IgG+ memory B cells in LUAD and KIRC. The bulk transcriptome libraries obtained in our laboratory will be made available after the release of the associated article.
 
 [**1_Lcp.R**](/Bulk/R_scripts/1_Lcp.R)
 
 
-###Single-cell
+### Single-cell
 
 Contains scripts for clusterization and description of tumour-infiltrating memory B cells in LUAD. The single-cell transcriptome data was obtained from Leader et al. [article](https://github.com/effiken/Leader_et_al).
 
-###TCGA
+### TCGA
 
 Contains script for Kaplan-Meier curves representing the influence of absolute and normalized value of FCRL4 gene to the progression of LUAD. 
 
