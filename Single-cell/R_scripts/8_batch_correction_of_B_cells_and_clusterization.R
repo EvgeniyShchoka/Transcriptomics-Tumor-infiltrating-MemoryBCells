@@ -211,7 +211,7 @@ saveToPng_small(plot_integrated_clusters(immune.combined) , "Barplot_patients_in
 
 # search for DE genes among all clusters
 all_markers <- FindAllMarkers(immune.combined) %>% filter(p_val_adj < 0.001)
-write.table(all_markers[, c(ncol(all_markers), 1:(ncol(all_markers)-1))], "Tables/8_all_DE_genes.tsv", row.names = T, col.names = T, sep = "\t")
+write.table(all_markers[, c(ncol(all_markers), 1:(ncol(all_markers)-1))], "Tables/8_all_DE_genes.tsv", row.names = F, col.names = T, sep = "\t")
 
 # rm all accept immune.combined
 rm(list = ls()[-match("immune.combined", ls())])
