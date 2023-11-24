@@ -67,13 +67,28 @@ Addition of QC metrics (such as % of motochondrial, ribosomal, and hemoglobin ge
 
 [**4_QC_graphs.R**](/Single-cell/R_scripts/4_QC_graphs.R)
 
-Visualization of QC metrics and removal of inappropriate cells.
+Visualization of QC metrics and filtering of inappropriate cells.
 
 <p align="center">
 <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/4_QC_vln_nFeature_RNA.png" width=70% height=70%>
 
 <p align="center">
 <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/4_QC_dotplot_mito_ribo_feature.png" width=70% height=70%>
+
+[**5_clusterization_of_all_cells.R**](/Single-cell/R_scripts/5_clusterization_of_all_cells.R)
+
+Clusterization of all cells.
+
+[**6_visualization_of_all_cells.R**](/Single-cell/R_scripts/6_visualization_of_all_cells.R)
+
+visualization of all cells, identification of doublets, and ground identification of B cells.
+
+<p align="center">
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/6_DimPlot_clusters.png"  width=45% height=45%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/6_DimPlot_doublet_finder.png"  width=45% height=45%/>
+    <br>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/6_FeaturePlot_MS4A1.png"  width=45% height=45%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/6_FeaturePlot_CD3E.png"  width=45% height=45%/>
 
 ### TCGA
 
