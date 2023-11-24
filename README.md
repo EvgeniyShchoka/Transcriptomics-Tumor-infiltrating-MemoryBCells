@@ -19,6 +19,8 @@ Deconvolution was performed for identification of contaminated samples in LUAD. 
     
 Differential expression of IgA+ vs IgG+ memory B cells and shrinkage of log2 fold changes we have identified 46 differentially expressed (DE) genes with adjusted P value (p_adj) < 0.01 and absolute log fold change (LFC) > 1.
 
+[Table](/Bulk/Tables/Lcp_DE_genes.tsv)
+
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Lcp_heatmap_DE_genes.png"  width=45% height=45%/>
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Lcp_volcano_plot_DE_genes.png"  width=45% height=45%"/>
