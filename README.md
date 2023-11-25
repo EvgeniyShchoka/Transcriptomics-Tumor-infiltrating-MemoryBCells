@@ -92,7 +92,7 @@ Visualization of all cells, identification of doublets, and ground identificatio
 
 [**7_clusterization_of_B_cells.R**](/Single-cell/R_scripts/7_clusterization_of_B_cells.R)
 
-Clusterization of all B cells.
+Clusterization of all B cells was produced using 1000 variable features, 20 dimensions and the resolution of 1.
 
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/7_Dim_plot.png"  width=45% height=45%/>
@@ -100,7 +100,17 @@ Clusterization of all B cells.
 
 [**8_batch_correction_of_B_cells_and_clusterization.R**](/Single-cell/R_scripts/8_batch_correction_of_B_cells_and_clusterization.R)
 
+For batch correction the {canonical correlation analysis](https://www.nature.com/articles/nbt.4096) (CCA) with previous filtering of patients by cell number was used. After batch correcton clustering was carried out using 1000 variable features, 20 dimensions and the resolution of 0,5.
 
+<p align="center">
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_Barplot_patients_without_integration.png"  width=45% height=45%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_Barplot_patients_integrated.png.png"  width=45% height=45%/>
+    <br>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_DimPlot_patient_integrated.png"  width=70% height=70%/>
+    <br>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_FeaturePlot_CD3E_integrated_small.png"  width=30% height=30%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_FeaturePlot_TCL1A_integrated_small.png"  width=30% height=30%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_FeaturePlot_CD38_integrated_small.png"  width=30% height=30%/>
 
 ### TCGA
 
