@@ -43,7 +43,7 @@ Differential expression of IgA+ vs IgG+ memory B cells and shrinkage of log2 fol
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Rcp_volcano_plot_DE_genes.png"  width=45% height=45%/>
 
 
-Gene Set Enrichment Analysis supplemented with Gene ontology (GO) gene setswas also used. [(List of DE pathways)](/Bulk/Tables/Rcp_gsea_combined_results.tsv)
+Gene Set Enrichment Analysis supplemented with Gene ontology (GO) gene sets was also used. [(List of DE pathways)](/Bulk/Tables/Rcp_gsea_combined_results.tsv)
 
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Rcp_GSEA_summary.png" width=70% height=70%>
@@ -100,21 +100,22 @@ Clusterization of all B cells was produced using 1000 variable features, 20 dime
 
 [**8_batch_correction_of_B_cells_and_clusterization.R**](/Single-cell/R_scripts/8_batch_correction_of_B_cells_and_clusterization.R)
 
-For batch correction the [canonical correlation analysis](https://www.nature.com/articles/nbt.4096) (CCA) with previous filtering of patients by cell number was used. After batch correcton clustering was carried out using 1000 variable features, 20 dimensions and the resolution of 0,6. During this stage only memory B cells were selected for further analysis.
+For batch correction the [canonical correlation analysis](https://www.nature.com/articles/nbt.4096) (CCA) with previous filtering of patients by cell number was used. After batch correcton clustering was carried out using 1000 variable features, 20 dimensions and the resolution of 0,6. During this stage only memory B cells were selected for further analysis. [(A list of DE genes grouped by clusters)](/Single-cell/Tables/8_all_DE_genes.tsv)
 
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_Barplot_patients_without_integration.png"  width=45% height=45%/>
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_Barplot_patients_integrated.png"  width=45% height=45%/>
     <br>
-    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_DimPlot_patient_integrated.png"  width=70% height=70%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_DimPlot_seurat_clusters_integrated.png"  width=45% height=45%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_DimPlot_patient_integrated.png"  width=45% height=45%/>
     <br>
-    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_FeaturePlot_CD3E_integrated_small.png"  width=30% height=30%/>
-    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_FeaturePlot_TCL1A_integrated_small.png"  width=30% height=30%/>
-    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_FeaturePlot_CD38_integrated_small.png"  width=30% height=30%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_VlnPlot_CD3E_integrated_small.png"  width=30% height=30%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_VlnPlot_TCL1A_integrated_small.png"  width=30% height=30%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_VlnPlot_CD38_integrated_small.png"  width=30% height=30%/>
 
 [**9_batch_correction_of_memory_B_cells_and_clusterization.R**](/Single-cell/R_scripts/9_batch_correction_of_memory_B_cells_and_clusterization.R)
 
-Clusterization of memory B cells was produced using 1000 variable features, 15 dimensions and the resolution of 1,2.
+Clusterization of memory B cells was produced using 1000 variable features, 15 dimensions and the resolution of 1,2. [(A list of DE genes grouped by clusters)](/Single-cell/Tables/9_all_DE_genes.tsv)
 
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_DimPlot_clusters.png"  width=70% height=70%/>
@@ -123,7 +124,12 @@ Clusterization of memory B cells was produced using 1000 variable features, 15 d
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_VlnPlot_PDCD1_small.png"  width=30% height=30%/>
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_VlnPlot_TNFSF11_small.png"  width=30% height=30%/>
     
+[**10_GSEA_of_FCRL4_positive_memory_B_cells.R**](/Single-cell/R_scripts/10_GSEA_of_FCRL4_positive_memory_B_cells.R)
 
+Gene Set Enrichment Analysis was used for cluster of interest compared with others. [(A list of DE pathways)](/Single-cell/Tables/10_GSEA_results_of_13th_cluster.tsv)
+
+<p align="center">
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/10_FCRL4_plus_GSEA_summary.png"  width=70% height=70%/>
 
 ### TCGA
 
