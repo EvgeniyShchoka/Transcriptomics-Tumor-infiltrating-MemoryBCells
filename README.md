@@ -81,7 +81,7 @@ Clusterization of all cells.
 
 [**6_visualization_of_all_cells.R**](/Single-cell/R_scripts/6_visualization_of_all_cells.R)
 
-visualization of all cells, identification of doublets, and ground identification of B cells.
+Visualization of all cells, identification of doublets, and ground identification of B cells.
 
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/6_DimPlot_clusters.png"  width=45% height=45%/>
@@ -89,6 +89,12 @@ visualization of all cells, identification of doublets, and ground identificatio
     <br>
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/6_FeaturePlot_MS4A1.png"  width=45% height=45%/>
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/6_FeaturePlot_CD3E.png"  width=45% height=45%/>
+
+[**7_clusterization_of_B_cells.R**](/Single-cell/R_scripts/7_clusterization_of_B_cells.R)
+
+Clusterization of all B cells.
+
+[**8_batch_correction_of_B_cells_and_clusterization.R**](/Single-cell/R_scripts/8_batch_correction_of_B_cells_and_clusterization.R)
 
 ### TCGA
 
