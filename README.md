@@ -77,7 +77,7 @@ Visualization of QC metrics and filtering of inappropriate cells.
 
 [**5_clusterization_of_all_cells.R**](/Single-cell/R_scripts/5_clusterization_of_all_cells.R)
 
-Clusterization of all cells. To exclude bias during clustering at all stages, MALAT1, XIST, immunoglobulin, mitochondrial genes and genes involved in cell cycle were excluded from the list of variable genes. The first clusterization was produced using 2000 variable features, 40 dimensions and the resolution of 2,5.
+Clusterization of all cells. To exclude bias during clustering at all stages, MALAT1, XIST, immunoglobulin, mitochondrial genes and genes involved in cell cycle were excluded from the list of variable genes, and this step was performed during all further stages. The first clusterization was produced using 2000 variable features, 40 dimensions and the resolution of 2,5.
 
 [**6_visualization_of_all_cells.R**](/Single-cell/R_scripts/6_visualization_of_all_cells.R)
 
@@ -100,7 +100,7 @@ Clusterization of all B cells was produced using 1000 variable features, 20 dime
 
 [**8_batch_correction_of_B_cells_and_clusterization.R**](/Single-cell/R_scripts/8_batch_correction_of_B_cells_and_clusterization.R)
 
-For batch correction the {canonical correlation analysis](https://www.nature.com/articles/nbt.4096) (CCA) with previous filtering of patients by cell number was used. After batch correcton clustering was carried out using 1000 variable features, 20 dimensions and the resolution of 0,5.
+For batch correction the [canonical correlation analysis](https://www.nature.com/articles/nbt.4096) (CCA) with previous filtering of patients by cell number was used. After batch correcton clustering was carried out using 1000 variable features, 20 dimensions and the resolution of 0,6. During this stage only memory B cells were selected for further analysis.
 
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_Barplot_patients_without_integration.png"  width=45% height=45%/>
@@ -111,6 +111,19 @@ For batch correction the {canonical correlation analysis](https://www.nature.com
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_FeaturePlot_CD3E_integrated_small.png"  width=30% height=30%/>
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_FeaturePlot_TCL1A_integrated_small.png"  width=30% height=30%/>
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_FeaturePlot_CD38_integrated_small.png"  width=30% height=30%/>
+
+[**9_batch_correction_of_memory_B_cells_and_clusterization.R**](/Single-cell/R_scripts/9_batch_correction_of_memory_B_cells_and_clusterization.R)
+
+Clusterization of memory B cells was produced using 1000 variable features, 15 dimensions and the resolution of 1,2.
+
+<p align="center">
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_DimPlot_clusters.png"  width=70% height=70%/>
+    <br>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_FeaturePlot_FCRL4_small.png"  width=30% height=30%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_FeaturePlot_PDCD1_small.png"  width=30% height=30%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_FeaturePlot_TNFSF11_small.png"  width=30% height=30%/>
+    
+
 
 ### TCGA
 
