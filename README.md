@@ -26,7 +26,7 @@ Differential expression of IgA+ vs IgG+ memory B cells and shrinkage of log2 fol
 To detect statistically significant group of genes Gene Set Enrichment Analysis supplemented with Gene ontology (GO) gene sets, some paths in the graph have been removed. [(List of DE pathways)](/Bulk/Tables/Lcp_gsea_combined_results.tsv)
 
 <p align="center">
-    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Lcp_GSEA_summary.png" width=60% height=60%>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Lcp_GSEA_summary.png" width=70% height=70%>
 
 [**2_Rcp.R**](/Bulk/R_scripts/2_Rcp.R) 
 
@@ -138,6 +138,6 @@ Contains script for Kaplan-Meier curves representing the influence of absolute a
 [TCGA.R](https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/TCGA/TCGA.R)
 
 <p align="center">
-    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/TCGA/Graphs_png/surv_plot_normalized_small.png" width=50% height=50%>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/TCGA/Graphs_png/surv_plot_normalized_small.png" width=70% height=70%>
 
 
