@@ -77,11 +77,11 @@ Visualization of QC metrics and filtering of inappropriate cells.
 
 [**5_clusterization_of_all_cells.R**](/Single-cell/R_scripts/5_clusterization_of_all_cells.R)
 
-Clusterization of all cells.
+Clusterization of all cells. To exclude bias during clustering at all stages, MALAT1, XIST, immunoglobulin, mitochondrial genes and genes involved in cell cycle were excluded from the list of variable genes. The first clusterization was produced using 2000 variable features, 40 dimensions and the resolution of 2,5.
 
 [**6_visualization_of_all_cells.R**](/Single-cell/R_scripts/6_visualization_of_all_cells.R)
 
-Visualization of all cells, identification of doublets, and ground identification of B cells.
+Visualization of all cells, identification of doublets, and ground identification and selection of B cells.
 
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/6_DimPlot_clusters.png"  width=45% height=45%/>
@@ -94,7 +94,13 @@ Visualization of all cells, identification of doublets, and ground identificatio
 
 Clusterization of all B cells.
 
+<p align="center">
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/7_Dim_plot.png"  width=45% height=45%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/7_Dim_plot_patients.png"  width=45% height=45%/>
+
 [**8_batch_correction_of_B_cells_and_clusterization.R**](/Single-cell/R_scripts/8_batch_correction_of_B_cells_and_clusterization.R)
+
+
 
 ### TCGA
 
