@@ -119,9 +119,9 @@ Clusterization of memory B cells was produced using 1000 variable features, 15 d
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_DimPlot_clusters.png"  width=70% height=70%/>
     <br>
-    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_FeaturePlot_FCRL4_small.png"  width=30% height=30%/>
-    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_FeaturePlot_PDCD1_small.png"  width=30% height=30%/>
-    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_FeaturePlot_TNFSF11_small.png"  width=30% height=30%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_VlnPlot_FCRL4_small.png"  width=30% height=30%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_VlnPlot_PDCD1_small.png"  width=30% height=30%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_VlnPlot_TNFSF11_small.png"  width=30% height=30%/>
     
 
 
