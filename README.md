@@ -104,7 +104,7 @@ For batch correction the {canonical correlation analysis](https://www.nature.com
 
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_Barplot_patients_without_integration.png"  width=45% height=45%/>
-    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_Barplot_patients_integrated.png.png"  width=45% height=45%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_Barplot_patients_integrated.png"  width=45% height=45%/>
     <br>
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_DimPlot_patient_integrated.png"  width=70% height=70%/>
     <br>
