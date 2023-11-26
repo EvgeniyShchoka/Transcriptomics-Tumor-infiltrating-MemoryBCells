@@ -1,7 +1,7 @@
 # Comparative transcriptome analysis of B lymphocyte populations infiltrating tumors and expressing IgA and IgG
 
 ## Brief description
-This repository contains code, tables, and visualizations for a paper soon to be published by Chudakov Lab. The research focuses on investigating the role of tumour-infiltrating memory B cells in Lung Adenocarcinoma (LUAD) and Kidney Renal Clear Cell Carcinoma (KIRC) progression. The findings shed light on the specific subset of FCRL4-expressing memory B cells, indicating exhausted, chronically antigen-stimulated phenotype.
+This repository contains code, tables, and visualizations for a paper soon to be published by Chudakov Lab. The research focuses on investigating the role of tumour-infiltrating memory B cells in Lung Adenocarcinoma (LUAD) and Kidney Renal Clear Cell Carcinoma (KIRC) progression. The findings shed light on the specific subset of FCRL4-expressing memory B cells, indicating exhausted, chronically antigen-stimulated phenotype, and its presence in LUAD may be a prognostic factor for cancer progression.
 
 ## Requirement
 
@@ -34,7 +34,7 @@ setwd(wd)
 ### Bulk 
 
 Contains scripts for downstream analysis of IgA+ vs IgG+ memory B cells in LUAD and KIRC. The bulk transcriptome libraries obtained in our laboratory will be made available after the release of the associated article. 
-The raw data were processed using STAR and featureCounts. GRCh38.p13 genome assembly and GRCh38.109 gene annotation from ensembl.org were used.
+The raw data were processed using [STAR](https://pubmed.ncbi.nlm.nih.gov/23104886/) and [featureCounts](https://academic.oup.com/bioinformatics/article/30/7/923/232889). [Ensemble](https://asia.ensembl.org/index.html) GRCh38.p13 genome assembly and GRCh38.109 gene annotation were used. Differential expression was performed using [DESeq2](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8) package. Deconvolution was performed using [Immunedeconv](https://pubmed.ncbi.nlm.nih.gov/32124323/) package. Gene set Enrichment Analysis (GSEA) was performed using [clusterProfiler](https://www.sciencedirect.com/science/article/pii/S2666675821000667) package.
 
 [**1_Lcp.R**](/Bulk/R_scripts/1_Lcp.R) 
 
@@ -49,7 +49,7 @@ Differential expression of IgA+ vs IgG+ memory B cells and shrinkage of log2 fol
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Lcp_heatmap_DE_genes.png"  width=45% height=45%/>
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Lcp_volcano_plot_DE_genes.png"  width=45% height=45%"/>
 
-To detect statistically significant group of genes Gene Set Enrichment Analysis supplemented with Gene ontology (GO) gene sets, some paths in the graph have been removed. [(List of DE pathways)](/Bulk/Tables/Lcp_gsea_combined_results.tsv)
+To detect statistically significant group of genes GSEA supplemented with Gene ontology (GO) gene sets, some paths in the graph have been removed. [(List of DE pathways)](/Bulk/Tables/Lcp_gsea_combined_results.tsv)
 
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Lcp_GSEA_summary.png" width=70% height=70%>
@@ -69,7 +69,7 @@ Differential expression of IgA+ vs IgG+ memory B cells and shrinkage of log2 fol
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Rcp_volcano_plot_DE_genes.png"  width=45% height=45%/>
 
 
-Gene Set Enrichment Analysis supplemented with Gene ontology (GO) gene sets was also used. [(List of DE pathways)](/Bulk/Tables/Rcp_gsea_combined_results.tsv)
+GSEA supplemented with GO gene sets was also used. [(List of DE pathways)](/Bulk/Tables/Rcp_gsea_combined_results.tsv)
 
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Rcp_GSEA_summary.png" width=70% height=70%>
@@ -77,7 +77,8 @@ Gene Set Enrichment Analysis supplemented with Gene ontology (GO) gene sets was 
 ### Single-cell
 
 Contains scripts for clusterization and description of tumour-infiltrating memory B cells in LUAD. The single-cell transcriptome data was obtained from Leader et al. [article](https://github.com/effiken/Leader_et_al) and are publically available.
-Data for single-cell data analysis were aligned by the authors of the article using Cell Ranger.
+Data for single-cell data analysis were aligned by the authors of the article using [Cell Ranger](https://www.10xgenomics.com/support/software/cell-ranger). Clusterization of cells was performed using [Seurat v4](https://satijalab.org/seurat/articles/get_started.html) package. GSEA was performed using [clusterProfiler](https://www.sciencedirect.com/science/article/pii/S2666675821000667) package. Identification of doublets was performed using [DoubletFinder](https://github.com/chris-mcginnis-ucsf/DoubletFinder) package.
+
 
 [**1_Labels.R**](/Single-cell/R_scripts/1_Labels.R) 
 
@@ -85,7 +86,7 @@ Addition of metadata and exclusion of TCR samples
 
 [**2_DoubletFinder.R**](/Single-cell/R_scripts/2_DoubletFinder.R)
 
-Detection of doublets using [DoubletFinder](https://github.com/chris-mcginnis-ucsf/DoubletFinder) package.
+Detection of doublets.
 
 [**3_QC.R**](/Single-cell/R_scripts/3_QC.R)
 
@@ -126,7 +127,7 @@ Clusterization of all B cells was produced using 1000 variable features, 20 dime
 
 [**8_batch_correction_of_B_cells_and_clusterization.R**](/Single-cell/R_scripts/8_batch_correction_of_B_cells_and_clusterization.R)
 
-For batch correction the [canonical correlation analysis](https://www.nature.com/articles/nbt.4096) (CCA) with previous filtering of patients by cell number was used. After batch correcton clustering was carried out using 1000 variable features, 20 dimensions and the resolution of 0,6. During this stage only memory B cells were selected for further analysis. [(A list of DE genes grouped by clusters)](/Single-cell/Tables/8_all_DE_genes.tsv)
+For batch correction the [canonical correlation analysis](https://www.nature.com/articles/nbt.4096) (CCA) with previous filtering of patients by low cell number was used. After batch correcton clustering was carried out using 1000 variable features, 20 dimensions and the resolution of 0,6. During this stage only memory B cells were selected for further analysis. [(A list of DE genes grouped by clusters)](/Single-cell/Tables/8_all_DE_genes.tsv)
 
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/8_Barplot_patients_without_integration.png"  width=45% height=45%/>
