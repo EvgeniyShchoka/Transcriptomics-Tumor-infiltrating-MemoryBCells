@@ -9,13 +9,18 @@ All computations were performed on Aldan3 HPC of ITM RSMU. All R scripts requiri
 
 To run scripts you need to install the following R libraries:
 ```
-packages_to_install <- c("tidyverse", "pheatmap", "ggrepel", "ggpubr", "purrr", "msigdbr", "Seurat", "RColorBrewer")
-install.packages(packages_to_install)
+# Install required CRAN packages
+cran_packages <- c("tidyverse", "pheatmap", "ggrepel", "ggpubr", "purrr", "msigdbr", "Seurat", "RColorBrewer")
+install.packages(cran_packages)
 
+# Install BiocManager if not already installed
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
-bioc_pkgs_to_install <- c("DESeq2", "AnnotationDbi", "org.Hs.eg.db", "clusterProfiler", "IOBR", "immunedeconv", "DoubletFinder")
-BiocManager::install(bioc_pkgs_to_install)
+
+# Install required Bioconductor packages using BiocManager
+bioc_packages <- c("DESeq2", "AnnotationDbi", "org.Hs.eg.db", "clusterProfiler", "IOBR", "immunedeconv", "DoubletFinder")
+BiocManager::install(bioc_packages)
+
 ```
 
 Working directory for every R script should be adjusted:
