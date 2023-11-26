@@ -3,6 +3,27 @@
 ## Brief description
 This repository contains code, tables, and visualizations for a paper soon to be published by Chudakov Lab. The research focuses on investigating the role of tumour-infiltrating memory B cells in Lung Adenocarcinoma (LUAD) and Kidney Renal Clear Cell Carcinoma (KIRC) progression. The findings shed light on the specific subset of FCRL4-expressing memory B cells, indicating exhausted, chronically antigen-stimulated phenotype.
 
+## Requirement
+
+All computations were performed on Aldan3 HPC of ITM RSMU. All R scripts requiring High Performance Computing were run using [Slurm Workload Manager](https://slurm.schedmd.com/quickstart.html), scripts are located in [this folder](/Single-cell/Slurm_scripts).
+
+To run scripts you need to install the following R libraries:
+```
+packages_to_install <- c("tidyverse", "pheatmap", "ggrepel", "ggpubr", "purrr", "msigdbr", "Seurat", "RColorBrewer")
+install.packages(packages_to_install)
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+bioc_pkgs_to_install <- c("DESeq2", "AnnotationDbi", "org.Hs.eg.db", "clusterProfiler", "IOBR", "immunedeconv", "DoubletFinder")
+BiocManager::install(bioc_pkgs_to_install)
+```
+
+Working directory for every R script should be adjusted:
+```
+wd <- "~/B_Memory_master/Master_Diploma_Private/Output/Bulk/"
+setwd(wd)
+```
+
 ## Repository structure
 
 ### Bulk 
@@ -30,7 +51,7 @@ To detect statistically significant group of genes Gene Set Enrichment Analysis 
 
 [**2_Rcp.R**](/Bulk/R_scripts/2_Rcp.R) 
 
-Deconvolution and valisation for identification of contaminated samples was performaed also for KIRC.
+Deconvolution and visualization for identification of contaminated samples was performaed also for KIRC.
 
 <p align="center">
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Bulk/Graphs_png/Rcp_heatmap_xCell.png"  width=45% height=45%/>
@@ -50,8 +71,8 @@ Gene Set Enrichment Analysis supplemented with Gene ontology (GO) gene sets was 
 
 ### Single-cell
 
-Contains scripts for clusterization and description of tumour-infiltrating memory B cells in LUAD. The single-cell transcriptome data was obtained from Leader et al. [article](https://github.com/effiken/Leader_et_al).
-Data were aligned by the authors of the article using Cell Ranger.
+Contains scripts for clusterization and description of tumour-infiltrating memory B cells in LUAD. The single-cell transcriptome data was obtained from Leader et al. [article](https://github.com/effiken/Leader_et_al) and are publically available.
+Data for single-cell data analysis were aligned by the authors of the article using Cell Ranger.
 
 [**1_Labels.R**](/Single-cell/R_scripts/1_Labels.R) 
 
