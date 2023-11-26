@@ -1,11 +1,12 @@
 # Comparative transcriptome analysis of B lymphocyte populations infiltrating tumors and expressing IgA and IgG
 
 ## Brief description
-This repository contains code, tables, and visualizations for a paper soon to be published by Chudakov Lab. The research focuses on investigating the role of tumour-infiltrating memory B cells in Lung Adenocarcinoma (LUAD) and Kidney Renal Clear Cell Carcinoma (KIRC) progression. The findings shed light on the specific subset of FCRL4-expressing memory B cells, indicating exhausted, chronically antigen-stimulated phenotype, and its presence in LUAD may be a prognostic factor for cancer progression.
+
+This repository contains code, tables, and visualizations for an upcoming paper from the Chudakov Lab. The research investigates the role of tumor-infiltrating memory B cells in the progression of Lung Adenocarcinoma (LUAD) and Kidney Renal Clear Cell Carcinoma (KIRC). The findings highlight a specific subset of FCRL4-expressing memory B cells, indicating an exhausted, chronically antigen-stimulated phenotype. The presence of this subset in LUAD may serve as a prognostic factor for cancer progression.
 
 ## Requirement
 
-All computations were performed on Aldan3 HPC of ITM RSMU. All R scripts requiring High Performance Computing were run using [Slurm Workload Manager](https://slurm.schedmd.com/quickstart.html), scripts are located in [this folder](/Single-cell/Slurm_scripts).
+All computations were performed on Aldan3 HPC of ITM RSMU. The R scripts requiring High-Performance Computing were executed using the [Slurm Workload Manager](https://slurm.schedmd.com/quickstart.html) with a resource allocation of 256 GB of memory and 40 CPUs. The scripts are located in [this folder](/Single-cell/Slurm_scripts).
 
 To run scripts you need to install the following R libraries:
 ```
@@ -34,8 +35,9 @@ setwd(wd)
 
 ### Bulk 
 
-Contains scripts for downstream analysis of IgA+ vs IgG+ memory B cells in LUAD and KIRC. The bulk transcriptome libraries obtained in our laboratory will be made available after the release of the associated article. 
-The raw data were processed using [STAR](https://pubmed.ncbi.nlm.nih.gov/23104886/) and [featureCounts](https://academic.oup.com/bioinformatics/article/30/7/923/232889). [Ensemble](https://asia.ensembl.org/index.html) GRCh38.p13 genome assembly and GRCh38.109 gene annotation were used. Differential expression was performed using [DESeq2](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8) package. Deconvolution was performed using [Immunedeconv](https://pubmed.ncbi.nlm.nih.gov/32124323/) package. Gene set Enrichment Analysis (GSEA) was performed using [clusterProfiler](https://www.sciencedirect.com/science/article/pii/S2666675821000667) package.
+Contains scripts for downstream analysis of IgA+ vs IgG+ memory B cells in LUAD and KIRC. The bulk transcriptome libraries obtained in our laboratory will be made available after the release of the associated article.
+
+The raw data were processed using [STAR](https://pubmed.ncbi.nlm.nih.gov/23104886/) and [featureCounts](https://academic.oup.com/bioinformatics/article/30/7/923/232889). [Ensemble](https://asia.ensembl.org/index.html) GRCh38.p13 genome assembly and GRCh38.109 gene annotation were used. Differential expression was performed using [DESeq2](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8) package. Deconvolution was performed using [Immunedeconv](https://pubmed.ncbi.nlm.nih.gov/32124323/) package. Gene set Enrichment Analysis (GSEA) was conducted using [clusterProfiler](https://www.sciencedirect.com/science/article/pii/S2666675821000667) package.
 
 [**1_Lcp.R**](/Bulk/R_scripts/1_Lcp.R) 
 
@@ -77,8 +79,9 @@ GSEA supplemented with GO gene sets was also used. [(List of DE pathways)](/Bulk
 
 ### Single-cell
 
-Contains scripts for clusterization and description of tumour-infiltrating memory B cells in LUAD. The single-cell transcriptome data was obtained from Leader et al. [article](https://github.com/effiken/Leader_et_al) and are publically available.
-Data for single-cell data analysis were aligned by the authors of the article using [Cell Ranger](https://www.10xgenomics.com/support/software/cell-ranger). Clusterization of cells was performed using [Seurat v4](https://satijalab.org/seurat/articles/get_started.html) package. GSEA was performed using [clusterProfiler](https://www.sciencedirect.com/science/article/pii/S2666675821000667) package. Identification of doublets was performed using [DoubletFinder](https://github.com/chris-mcginnis-ucsf/DoubletFinder) package.
+Contains scripts for clusterization and description of tumour-infiltrating memory B cells in LUAD. The single-cell transcriptome data was obtained from Leader et al. [article](https://github.com/effiken/Leader_et_al), publicly available for access.
+
+The single-cell data were aligned by the authors using [Cell Ranger](https://www.10xgenomics.com/support/software/cell-ranger).  Cell clustering was performed with the [Seurat v4](https://satijalab.org/seurat/articles/get_started.html) package. GSEA was conducted using [clusterProfiler](https://www.sciencedirect.com/science/article/pii/S2666675821000667) package. Identification of doublets was carried out using the [DoubletFinder](https://github.com/chris-mcginnis-ucsf/DoubletFinder) package.
 
 
 [**1_Labels.R**](/Single-cell/R_scripts/1_Labels.R) 
@@ -161,7 +164,8 @@ Gene Set Enrichment Analysis was used for cluster of interest compared with othe
 
 ### TCGA
 
-Contains script for Kaplan-Meier curves representing the influence of absolute and normalized value of FCRL4 gene to the progression of LUAD. 
+Contains a script for generating Kaplan-Meier curves representing the impact of the absolute and normalized values of the FCRL4 gene on the progression of LUAD. 
+
 This analysis was performed using [TCGAbiolinks](https://academic.oup.com/nar/article/44/8/e71/2465925?login=false) package.
 
 [TCGA.R](https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/TCGA/TCGA.R)
