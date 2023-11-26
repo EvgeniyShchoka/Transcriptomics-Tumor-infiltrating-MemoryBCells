@@ -65,10 +65,13 @@ LC_B <- FindNeighbors(LC_B, dims = 1:20)
 LC_B <- FindClusters(LC_B, resolution = 1)
 LC_B <- RunUMAP(LC_B, dims = 1:20)
 
-# Save DimPlot
+# Save plots
 getPalette_clust = colorRampPalette(brewer.pal(9, "Set1"))(length(unique(LC_B$seurat_clusters)))
 c <- DimPlot(LC_B, reduction = "umap", label = TRUE, cols = getPalette_clust, raster=FALSE) + NoLegend()
 save_plot(c, "Dim_plot")
+getPalette_clust_pat = colorRampPalette(brewer.pal(9, "Set1"))(length(unique(LC_B$patient)))
+d <- DimPlot(LC_B, reduction = "umap", group.by = "patient", cols = getPalette_clust_pat, raster=FALSE)
+save_plot(d, "Dim_plot_patients")
 
 # rm all accept LC_B
 rm(list = ls()[-match("LC_B", ls())])

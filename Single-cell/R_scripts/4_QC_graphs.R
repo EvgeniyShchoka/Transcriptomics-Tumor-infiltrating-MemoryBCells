@@ -41,7 +41,8 @@ plot_scatter_small <- function(name, plot) {
 # Part 1: Visualizing QC Metrics with Violin Plots
 feats <- c("nFeature_RNA", "nCount_RNA", "percent_mito", "percent_ribo", "percent_hb", "percent_largest_gene")
 for (i in feats) {
-  graph <- VlnPlot(LC, group.by = "patient", features = i, pt.size = 0.01, raster=FALSE) + NoLegend()
+  graph <- VlnPlot(LC, group.by = "patient", features = i, pt.size = FALSE, raster=FALSE) + NoLegend() +
+    stat_summary(fun = mean, geom='point', size = 10, colour = "black", shape = 95)
   plot_scatter(paste0("QC_vln_", i), graph)
   plot_scatter_small(paste0("QC_vln_", i), graph)
 }
