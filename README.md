@@ -149,7 +149,8 @@ For batch correction the [canonical correlation analysis](https://www.nature.com
 Clusterization of memory B cells was produced using 1000 variable features, 15 dimensions and the resolution of 1,2. [(A list of DE genes grouped by clusters)](/Single-cell/Tables/9_all_DE_genes.tsv)
 
 <p align="center">
-    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_DimPlot_clusters.png"  width=70% height=70%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_DimPlot_clusters.png"  width=45% height=45%/>
+    <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_DimPlot_patient.png"  width=45% height=45%/>
     <br>
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_VlnPlot_FCRL4_small.png"  width=30% height=30%/>
     <img src="https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/Single-cell/Graphs_png/9_VlnPlot_PDCD1_small.png"  width=30% height=30%/>
