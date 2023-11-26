@@ -55,7 +55,7 @@ plots <- list(
   DimPlot(LC, reduction = "umap", label = TRUE, cols = getPalette(LC$seurat_clusters, 9), raster=FALSE) + NoLegend(),
   DimPlot(LC, reduction = "umap", label = TRUE, group.by = "patient", cols = getPalette(LC$patient, 9), raster=FALSE),
   DimPlot(LC, reduction = "umap", label = TRUE, group.by = "lib", cols = getPalette(LC$lib, 3), raster=FALSE),
-  DimPlot(LC, reduction = "umap", group.by = "doublet_finder", cols = getPalette(LC$doublet_finder, 3), label = FALSE, raster=FALSE),
+  DimPlot(LC, reduction = "umap", group.by = "doublet_finder", cols = c("#E41A1C", "royalblue3"), label = FALSE, raster=FALSE),
   DimPlot(LC, reduction = "umap", label = TRUE, group.by = "cancer_type", cols = getPalette(LC$cancer_type, 3), raster=FALSE)
 )
 paths <- c("clusters", "patient", "lib", "doublet_finder", "cancer_type")
