@@ -10,7 +10,7 @@ All computations were performed on Aldan3 HPC of ITM RSMU. All R scripts requiri
 To run scripts you need to install the following R libraries:
 ```
 # Install required CRAN packages
-cran_packages <- c("tidyverse", "pheatmap", "ggrepel", "ggpubr", "purrr", "msigdbr", "Seurat", "RColorBrewer")
+cran_packages <- c("tidyverse", "pheatmap", "ggrepel", "ggpubr", "purrr", "msigdbr", "Seurat", "RColorBrewer", "survminer", "survival", "SummarizedExperiment", "TCGAbiolinks", "DESeq2")
 install.packages(cran_packages)
 
 # Install BiocManager if not already installed
@@ -20,6 +20,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 # Install required Bioconductor packages using BiocManager
 bioc_packages <- c("DESeq2", "AnnotationDbi", "org.Hs.eg.db", "clusterProfiler", "IOBR", "immunedeconv", "DoubletFinder")
 BiocManager::install(bioc_packages)
+
 
 ```
 
@@ -161,6 +162,7 @@ Gene Set Enrichment Analysis was used for cluster of interest compared with othe
 ### TCGA
 
 Contains script for Kaplan-Meier curves representing the influence of absolute and normalized value of FCRL4 gene to the progression of LUAD. 
+This analysis was performed using [TCGAbiolinks](https://academic.oup.com/nar/article/44/8/e71/2465925?login=false) package.
 
 [TCGA.R](https://github.com/EvgeniyShchoka/Transcriptomics-of-IgA-IgG-TIL-B/blob/master/TCGA/TCGA.R)
 
